@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "com.github.ablil.detekt"
-version = "0.0.1"
+version = "0.1.0"
 
 dependencies {
     compileOnly("io.gitlab.arturbosch.detekt:detekt-api:1.23.8")

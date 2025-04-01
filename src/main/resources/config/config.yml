@@ -1,3 +1,5 @@
 CustomRuleSet:
   UseAssertJOnly:
     active: true
+  DescriptiveTestFunctions:
+    active: true
