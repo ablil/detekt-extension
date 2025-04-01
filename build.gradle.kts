@@ -31,4 +31,15 @@ publishing {
             from(components["java"])
         }
     }
+
+    repositories {
+        maven {
+            name = "GithubPackage"
+            url = uri("https://maven.pkg.github.com/ablil/detekt-extension")
+            credentials {
+                username = System.getenv("GITHUB_ACTOR")
+                password = System.getenv("GITHUB_TOKEN")
+            }
+        }
+    }
 }
