@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "org.example.detekt"
-version = "1.0-SNAPSHOT"
+version = "0.1-SNAPSHOT"
 
 dependencies {
     compileOnly("io.gitlab.arturbosch.detekt:detekt-api:1.23.8")
@@ -16,7 +16,7 @@ dependencies {
 }
 
 kotlin {
-    jvmToolchain(8)
+    jvmToolchain(21)
 }
 
 tasks.withType<Test>().configureEach {

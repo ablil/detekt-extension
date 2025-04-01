@@ -8,16 +8,25 @@ import org.jetbrains.kotlin.cli.jvm.compiler.KotlinCoreEnvironment
 import org.junit.jupiter.api.Test
 
 @KotlinCoreEnvironmentTest
-internal class MyRuleTest(private val env: KotlinCoreEnvironment) {
+internal class UseAssertJOnlyTest(private val env: KotlinCoreEnvironment) {
 
     @Test
-    fun `reports inner classes`() {
+    fun `reports usage of kotlin test package`() {
         val code = """
-        class A {
-          inner class B
+        import io.kotest.matchers.collections.shouldHaveSize
+        import org.jetbrains.kotlin.cli.jvm.compiler.KotlinCoreEnvironment
+        import org.junit.jupiter.api.Test
+        import kotlin.test.assertEquals
+
+        class Foo {
+        
+            @Test
+            fun testing() {
+                assertEquals("foo", "foo")
+            }
         }
         """
-        val findings = MyRule(Config.empty).compileAndLintWithContext(env, code)
+        val findings = UseAssertJOnly(Config.empty).compileAndLintWithContext(env, code)
         findings shouldHaveSize 1
     }
 
@@ -28,7 +37,7 @@ internal class MyRuleTest(private val env: KotlinCoreEnvironment) {
           class B
         }
         """
-        val findings = MyRule(Config.empty).compileAndLintWithContext(env, code)
+        val findings = UseAssertJOnly(Config.empty).compileAndLintWithContext(env, code)
         findings shouldHaveSize 0
     }
 }
