@@ -9,6 +9,18 @@ plugins {
     id 'io.gitlab.arturbosch.detekt' version '<detekt-version>'
 }
 
+repositories {
+    mavenCentral()
+    maven {
+        name = "GithubPackage"
+        url = uri("https://maven.pkg.github.com/ablil/detekt-extension")
+        credentials {
+            username = project.findProperty("gpr.username") as String ?: System.getenv('GITHUB_ACTOR')
+            password = project.findProperty("gpr.password") as String ?: System.getenv('GITHUB_TOKEN')
+        }
+    }
+}
+
 dependencies {
     detektPlugins('com.github.ablil.detekt:detekt-custom-rule:<version>')
 }
