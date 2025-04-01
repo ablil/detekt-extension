@@ -1,5 +1,6 @@
-package org.example.detekt
+package com.github.ablil
 
+import com.github.ablil.UseAssertJOnly
 import io.gitlab.arturbosch.detekt.api.Config
 import io.gitlab.arturbosch.detekt.rules.KotlinCoreEnvironmentTest
 import io.gitlab.arturbosch.detekt.test.compileAndLintWithContext
