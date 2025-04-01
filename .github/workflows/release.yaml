@@ -5,10 +5,7 @@ on:
     tags:
       - v*
 
-permissions:
-  contents: read
-  packages: write
-
+permissions: write-all
 
 jobs:
   release:
@@ -21,5 +18,9 @@ jobs:
           distribution: temurin
       - name: publish to Github packages
         run: ./gradlew publish
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: create Github release
+        run: gh release create ${{ github.event.ref }} --generate-notes
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
