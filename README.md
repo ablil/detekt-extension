@@ -10,7 +10,7 @@ plugins {
 }
 
 dependencies {
-    detektPlugins('org.example.detekt:detekt-custom-rule:<version>')
+    detektPlugins('com.github.ablil.detekt:detekt-custom-rule:<version>')
 }
 ```
 

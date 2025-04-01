@@ -3,7 +3,7 @@ plugins {
     `maven-publish`
 }
 
-group = "org.example.detekt"
+group = "com.github.ablil.detekt"
 version = "0.1-SNAPSHOT"
 
 dependencies {
