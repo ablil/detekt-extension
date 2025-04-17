@@ -3,7 +3,7 @@ updates:
 - package-ecosystem: gradle
   directory: "/"
   schedule:
-    interval: daily
+    interval: monthly
   groups:
     detekt:
       patterns:
@@ -11,4 +11,4 @@ updates:
 - package-ecosystem: github-actions
   directory: "/"
   schedule:
-    interval: daily
+    interval: monthly
