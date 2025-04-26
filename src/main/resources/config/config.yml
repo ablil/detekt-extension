@@ -7,3 +7,5 @@ CustomRuleSet:
     active: true
   ArgumentsOfSameType:
     active: true
+  JPAEagerLoading:
+    active: true

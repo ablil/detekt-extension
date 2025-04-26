@@ -14,8 +14,8 @@ class CustomRuleSetProvider : RuleSetProvider {
                 UseAssertJOnly(config),
                 DescriptiveTestFunctions(config),
                 NoDataClassEntity(config),
-                ArgumentsOfSameType(config)
-
+                ArgumentsOfSameType(config),
+                JPAEagerLoading(config)
             ),
         )
     }
