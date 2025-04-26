@@ -3,3 +3,5 @@ CustomRuleSet:
     active: true
   DescriptiveTestFunctions:
     active: true
+  NoDataClassEntity:
+    active: true

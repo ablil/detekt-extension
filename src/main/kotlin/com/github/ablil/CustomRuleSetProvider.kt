@@ -12,7 +12,8 @@ class CustomRuleSetProvider : RuleSetProvider {
             ruleSetId,
             listOf(
                 UseAssertJOnly(config),
-                DescriptiveTestFunctions(config)
+                DescriptiveTestFunctions(config),
+                NoDataClassEntity(config)
             ),
         )
     }
