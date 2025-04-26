@@ -49,6 +49,12 @@ This rule prevent usage of kotlin [data classes](https://kotlinlang.org/docs/dat
 This rule reports call of method with parameters of same type but without named arguments, which quite 
 often lead to confusion or swapping them by mistake.
 
+**JPAEagerLoading**
+
+This rule report usage of **eagerly** loading strategy for JPA association, since it's impact performance.
+
+Read more about it here [eager fetching is a code smell](https://vladmihalcea.com/eager-fetching-is-a-code-smell/)
+
 ## Development
 
 ### How to add new rules
