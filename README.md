@@ -44,6 +44,11 @@ This rule prevent usage of kotlin [data classes](https://kotlinlang.org/docs/dat
 * data class generate *toString* based on all fields, which might lead to a potential *N + 1* problem
 * Most JPA provider expect the entity class to be *mutable*, to mutate them through lazy initialization, proxies ...
 
+**ArgumentsOfSameType**
+
+This rule reports call of method with parameters of same type but without named arguments, which quite 
+often lead to confusion or swapping them by mistake.
+
 ## Development
 
 ### How to add new rules

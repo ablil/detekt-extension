@@ -5,3 +5,5 @@ CustomRuleSet:
     active: true
   NoDataClassEntity:
     active: true
+  ArgumentsOfSameType:
+    active: true
