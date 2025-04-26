@@ -11,18 +11,11 @@ plugins {
 
 repositories {
     mavenCentral()
-    maven {
-        name = "GithubPackage"
-        url = uri("https://maven.pkg.github.com/ablil/detekt-extension")
-        credentials {
-            username = project.findProperty("gpr.username") as String ?: System.getenv('GITHUB_ACTOR')
-            password = project.findProperty("gpr.password") as String ?: System.getenv('GITHUB_TOKEN')
-        }
-    }
+    maven { url 'https://jitpack.io' }
 }
 
 dependencies {
-    detektPlugins('com.github.ablil.detekt:detekt-custom-rule:<version>')
+    detektPlugins('com.github.ablil:detekt-extension:<version>')
 }
 ```
 
